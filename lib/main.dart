@@ -11,22 +11,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("앱임"),
-          centerTitle: false,
-        ),
-        body: Text("안녕s"),
-        bottomNavigationBar: BottomAppBar(
-          child: SizedBox(
-            height: 100,
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(Icons.phone),
-                  Icon(Icons.message),
-                  Icon(Icons.contact_page),
-                ]),
-          ),
+        appBar: AppBar(),
+        body: ListView(children: [
+          Text('hello'),
+        ]),
+        bottomNavigationBar: BottomBar(),
+      ),
+    );
+  }
+}
+
+class BottomBar extends StatelessWidget {
+  const BottomBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomAppBar(
+      child: SizedBox(
+        height: 50,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Icon(Icons.phone),
+            Icon(Icons.chat),
+            Icon(Icons.contact_page),
+          ],
         ),
       ),
     );
