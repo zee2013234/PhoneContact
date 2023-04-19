@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  var name = ["Hong", "Kim", "Pizza"];
+
+  var numeric = [0, 0, 0];
+
+  addOne(text) {
+    setState(() {
+      name = [...name, text];
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +32,20 @@ class MyApp extends StatelessWidget {
               showDialog(
                   context: context,
                   builder: (context) {
-                    return DialogUI();
+                    return DialogUI(function: addOne);
                   });
             },
           );
         }),
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text(name.length.toString()),
+          centerTitle: false,
+        ),
         body: ListView.builder(
-            itemCount: 3,
+            itemCount: name.length,
             itemBuilder: (c, i) {
-              return ListTile(leading: Icon(Icons.person), title: Text("홍길동"));
+              return ListTile(
+                  leading: Icon(Icons.person), title: Text(name[i]));
             }),
         bottomNavigationBar: BottomBar(),
       ),
@@ -35,7 +54,9 @@ class MyApp extends StatelessWidget {
 }
 
 class DialogUI extends StatelessWidget {
-  const DialogUI({super.key});
+  DialogUI({Key? key, this.function}) : super(key: key);
+  final function;
+  var inputData = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +69,19 @@ class DialogUI extends StatelessWidget {
         children: [
           Text("Contact",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
-          TextField(),
+          TextField(controller: inputData),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               TextButton(
                   onPressed: () => Navigator.pop(context),
                   child: Text("Cancel")),
-              TextButton(onPressed: () {}, child: Text("OK")),
+              TextButton(
+                  onPressed: () {
+                    function(inputData.text);
+                    Navigator.pop(context);
+                  },
+                  child: Text("OK")),
             ],
           )
         ],
