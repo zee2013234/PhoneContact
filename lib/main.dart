@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(),
-        body: ListView(children: [
-          Text('hello'),
+        body: ListView(children: const [
+          Row(children: [Icon(Icons.person), Text("홍길동")]),
+          Row(children: [Icon(Icons.person), Text("홍길동")]),
+          Row(children: [Icon(Icons.person), Text("홍길동")]),
         ]),
         bottomNavigationBar: BottomBar(),
       ),
@@ -31,7 +33,7 @@ class BottomBar extends StatelessWidget {
         height: 50,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
+          children: const [
             Icon(Icons.phone),
             Icon(Icons.chat),
             Icon(Icons.contact_page),
