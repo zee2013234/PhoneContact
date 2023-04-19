@@ -17,29 +17,7 @@ class MyApp extends StatelessWidget {
               showDialog(
                   context: context,
                   builder: (context) {
-                    return Dialog(
-                        child: Container(
-                      padding: EdgeInsets.all(20),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Contact",
-                              style: TextStyle(
-                                  fontSize: 24, fontWeight: FontWeight.w600)),
-                          TextField(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              TextButton(
-                                  onPressed: () => Navigator.pop(context),
-                                  child: Text("Cancel")),
-                              TextButton(onPressed: () {}, child: Text("OK")),
-                            ],
-                          )
-                        ],
-                      ),
-                    ));
+                    return DialogUI();
                   });
             },
           );
@@ -53,6 +31,36 @@ class MyApp extends StatelessWidget {
         bottomNavigationBar: BottomBar(),
       ),
     );
+  }
+}
+
+class DialogUI extends StatelessWidget {
+  const DialogUI({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+        child: Container(
+      padding: EdgeInsets.all(20),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Contact",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
+          TextField(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text("Cancel")),
+              TextButton(onPressed: () {}, child: Text("OK")),
+            ],
+          )
+        ],
+      ),
+    ));
   }
 }
 
