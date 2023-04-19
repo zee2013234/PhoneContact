@@ -11,12 +11,45 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        floatingActionButton: Builder(builder: (context) {
+          return FloatingActionButton(
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Dialog(
+                        child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Contact",
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.w600)),
+                          TextField(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text("Cancel")),
+                              TextButton(onPressed: () {}, child: Text("OK")),
+                            ],
+                          )
+                        ],
+                      ),
+                    ));
+                  });
+            },
+          );
+        }),
         appBar: AppBar(),
-        body: ListView(children: const [
-          Row(children: [Icon(Icons.person), Text("홍길동")]),
-          Row(children: [Icon(Icons.person), Text("홍길동")]),
-          Row(children: [Icon(Icons.person), Text("홍길동")]),
-        ]),
+        body: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (c, i) {
+              return ListTile(leading: Icon(Icons.person), title: Text("홍길동"));
+            }),
         bottomNavigationBar: BottomBar(),
       ),
     );
