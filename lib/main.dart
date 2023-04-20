@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
             itemBuilder: (c, i) {
               return ListTile(
                   leading: Icon(Icons.person),
-                  title: Text(name[i].displayName));
+                  title: Text(name[i].displayName ?? ''));
             }),
         bottomNavigationBar: BottomBar(),
       ),
