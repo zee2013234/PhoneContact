@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		txzv1ht9RSRpz8lxMwC7N1t1iCA=
+		6jB5o+UhKNMxyqtSHApgu9hsG/A=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		/BG1uxGw5pnEY+PyJw80206dDM0=
+		0E+pdfN9OL+zbPZeuyaZKZ9vmrA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		VB8Dttzwsjh2PlaYIOq39lCtM9o=
+		avd7EiGvlnHrsqa147UkQXjhkAo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/website.png</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		5c6zijRDVzhBQ4b/e25RQmergmo=
+		YFxEGKoJ+u8x3YuOSTcSrNwvNoI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -184,9 +184,21 @@
 		<data>
 		nMTZkkm9uooDDa8A2YJSyK73oP8=
 		</data>
+		<key>Frameworks/contacts_service.framework/Info.plist</key>
+		<data>
+		gaeL9F2QFpcdxrzbwihJg3dBN9c=
+		</data>
+		<key>Frameworks/contacts_service.framework/_CodeSignature/CodeResources</key>
+		<data>
+		jxPimVitnNI3U1T9O9VrVaMAoEk=
+		</data>
+		<key>Frameworks/contacts_service.framework/contacts_service</key>
+		<data>
+		JobfyGulanE2ALUqQvm4Pm+KuDA=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		jMlrpxQJyYE+/GxCz1GzbvJJ7is=
+		0pbcplSV7lGUol/sUaR24TggZaY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -269,7 +281,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wlh+4Y51hOUnGd+g93BZt/QkHi3ZsPaOXXEtaMqqEdg=
+			wiLXhylz2nZfUp/Uk7urjkLP38B1+2RB8dVAoCou7W0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -283,7 +295,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jovJysartJzVhKgimAUr4781lPMnLLi2h5d1ClcKsfE=
+			W23JNiGig+wTPtX3mQKJvJTDIJFa1aepjJvvsPudKGo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -311,7 +323,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4PYeqQdNPbZ/ev3bV41pKJqkRybMiZfqKtOtxp7xBX4=
+			OULgQa/G8RpqOrGo+2HKWo9lgm+MNBC0eT0XoxXi+lg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/website.png</key>
@@ -339,7 +351,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PGSqPSqbAW5BBT2ouN6oXCRtP9lnMG5fjcIJuZQ0PsA=
+			rGqwFu7q9zNhACkb3NSN2tK9G2pZtvPL87jULYTHO7I=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -508,6 +520,27 @@
 			<key>hash2</key>
 			<data>
 			rETMw/Yb9jC7IPuAQ9hs/kyJldBrRgCEQA20XXBJezA=
+			</data>
+		</dict>
+		<key>Frameworks/contacts_service.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oIhVF9oiyn5HKchmcTLWufUuw6e54EGrvVm4029Xll0=
+			</data>
+		</dict>
+		<key>Frameworks/contacts_service.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jCD3cbJGCOZKsQyPCh6AFMQB4Tr35bkuK13n6om49bs=
+			</data>
+		</dict>
+		<key>Frameworks/contacts_service.framework/contacts_service</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XTNu9if43bzeadGFsDr2pozRvCBfX7NIHAz6ns+y3Xc=
 			</data>
 		</dict>
 	</dict>

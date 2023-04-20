@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:contacts_service/contacts_service.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,13 +14,38 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var name = ["Hong", "Kim", "Pizza"];
+  getPermission() async {
+    var status = await Permission.contacts.status;
+    if (status.isGranted) {
+      print('Allowed');
+      var contacts = await ContactsService.getContacts();
+      setState(() {
+        name = contacts;
+      });
+    } else if (status.isDenied) {
+      print("NO");
+      Permission.contacts.request();
+      openAppSettings();
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getPermission();
+  }
+
+  var name = [];
 
   var numeric = [0, 0, 0];
 
-  addOne(text) {
+  addOne(text) async {
+    var newPerson = Contact();
+    newPerson.givenName = text;
+    await ContactsService.addContact(newPerson);
+    var contacts = await ContactsService.getContacts();
     setState(() {
-      name = [...name, text];
+      name = contacts;
     });
   }
 
@@ -38,14 +65,21 @@ class _MyAppState extends State<MyApp> {
           );
         }),
         appBar: AppBar(
-          title: Text(name.length.toString()),
-          centerTitle: false,
-        ),
+            title: Text(name.length.toString()),
+            centerTitle: false,
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    getPermission();
+                  },
+                  icon: Icon(Icons.contacts))
+            ]),
         body: ListView.builder(
             itemCount: name.length,
             itemBuilder: (c, i) {
               return ListTile(
-                  leading: Icon(Icons.person), title: Text(name[i]));
+                  leading: Icon(Icons.person),
+                  title: Text(name[i].displayName));
             }),
         bottomNavigationBar: BottomBar(),
       ),

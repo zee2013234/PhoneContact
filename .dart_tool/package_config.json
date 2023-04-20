@@ -32,6 +32,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "contacts_service",
+      "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/contacts_service-0.6.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -98,6 +104,30 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "permission_handler",
+      "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/permission_handler-8.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/permission_handler_platform_interface-3.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "quiver",
+      "rootUri": "file:///Users/zeeshin/.pub-cache/hosted/pub.dev/quiver-3.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/zeeshin/Documents/GitHub/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -152,7 +182,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-04-12T07:48:04.241869Z",
+  "generated": "2023-04-20T05:18:21.297733Z",
   "generator": "pub",
   "generatorVersion": "3.0.0-408.0.dev"
 }
